@@ -25,6 +25,18 @@ $(document).ready(function() {
   $('.ryu-throwing').hide();
   $('.ryu-ready').show();
   });
+  $('body').keydown(function(event) {
+  	if (event.which == 88) {
+  		event.preventDefault();
+	  $('.ryu-throwing').hide();
+	  $('.ryu-ready').hide();
+	  $('.ryu-still').hide();
+	  $('.ryu-cool').show();
+    };
+  }).keyup(function(){
+  	$('.ryu-cool').hide();
+  	$('.ryu-still').show();
+  });
 });
 
 function playHadouken () {
